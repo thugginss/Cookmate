@@ -22,6 +22,67 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+header {
+    background-color: #5a8f7b; /* Muted green */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Add display flex to align title and button */
+    display: flex;
+    justify-content: space-between; /* Puts title on left, button on right */
+    align-items: center; /* Vertically aligns them */
+    flex-wrap: wrap; /* Allows button to wrap below title on small screens */
+}
+
+header h1 {
+    margin: 0;
+    /* Adjust margin if needed, e.g., margin-right: 1rem; */
+}
+
+/* Styling for the new home button */
+.home-button {
+    display: inline-block; /* Allows padding and acts like a block */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-decoration: none; /* Remove underline from link */
+    color: #5a8f7b; /* Button text color */
+    background-color: #fff; /* Button background color */
+    border: 1px solid #5a8f7b; /* Optional border */
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-left: 1rem; /* Space from the title or other elements */
+}
+
+.home-button:hover {
+    background-color: #e8f3ef; /* Lighter green on hover */
+    color: #4a7a6a;
+}
+
+/* Responsive adjustment for smaller screens for the header */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack title and button vertically */
+    }
+    header h1 {
+        margin-bottom: 0.5rem; /* Add space below title when stacked */
+    }
+    .home-button {
+        margin-left: 0; /* Remove left margin when stacked */
+        margin-top: 0.5rem; /* Add space above button when stacked */
+        width: 100%; /* Make button full width when stacked */
+        text-align: center;
+    }
+}
+
+
+/* Buttons (general styles - ensure this doesn't conflict too much) */
+button, .home-button { /* Added .home-button here if you want it to share some base styles */
+    /* ... your existing general button styles ... */
+    /* You might need to adjust padding or font-size if they are different */
+}
+
 header h1 {
     margin: 0;
 }
