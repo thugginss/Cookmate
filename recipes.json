@@ -3,6 +3,7 @@
     "id": "lemon-herb-chicken-thighs-meal",
     "name": "Lemon Herb Chicken Thighs, Roasted Broccoli & Zucchini, Chickpea Pasta",
     "estimatedTime": "45 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "2 lb boneless skinless chicken thighs",
       "2 heads broccoli, cut into florets",
@@ -36,6 +37,7 @@
     "id": "ground-turkey-stir-fry-meal",
     "name": "Ground Turkey Stir-Fry, Roasted Cabbage, Carrots, Peppers, Brown Rice",
     "estimatedTime": "50 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "2 lb ground turkey",
       "1/2 head green cabbage, sliced",
@@ -70,7 +72,8 @@
     "id": "maple-dijon-salmon-meal",
     "name": "Maple-Dijon Salmon, Roasted Brussels Sprouts & Squash, Quinoa",
     "estimatedTime": "45 minutes",
-    "ingredients": [
+ 	"dateAdded": "2025-05-12T10:00:00.000Z", 
+   "ingredients": [
       "4 salmon fillets (approx. 6 oz each), skin on or off",
       "1.5 lb Brussels sprouts, trimmed and halved",
       "1 medium butternut squash, peeled, seeded, and cubed (about 3-4 cups)",
@@ -100,6 +103,7 @@
     "id": "pork-tenderloin-cabbage-steaks-meal",
     "name": "Pork Tenderloin, Roasted Cabbage Steaks, Carrots, Lentils",
     "estimatedTime": "55 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "2 pork tenderloins (about 1-1.5 lb total)",
       "1/2 medium head green cabbage, cut horizontally into 1-inch thick steaks",
@@ -134,6 +138,7 @@
     "id": "cilantro-lime-chicken-meal",
     "name": "Cilantro-Lime Chicken, Roasted Broccoli, Peppers, Chickpea Pasta",
     "estimatedTime": "40 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "3 lb boneless, skinless chicken breasts (or thighs)",
       "2 heads broccoli, cut into florets",
@@ -163,6 +168,7 @@
     "id": "shrimp-zoodles-roasted-veg-meal",
     "name": "Shrimp & Zoodles, Roasted Carrots & Brussels Sprouts, Brown Rice",
     "estimatedTime": "45 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "1.5 lb large shrimp, peeled and deveined",
       "3 medium zucchini, spiralized into 'zoodles'",
@@ -197,6 +203,7 @@
     "id": "herb-chicken-drumsticks-meal",
     "name": "Herb Chicken Drumsticks, Roasted Squash, Broccoli, White Beans",
     "estimatedTime": "50 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "8 chicken drumsticks",
       "1 medium butternut squash, peeled, seeded, and cubed",
@@ -230,6 +237,7 @@
     "id": "balsamic-pork-chops-meal",
     "name": "Balsamic Pork Chops, Roasted Broccoli & Carrots, Brown Rice",
     "estimatedTime": "40 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "4 boneless pork chops (about 1-inch thick)",
       "2 heads broccoli, cut into florets",
@@ -261,6 +269,7 @@
     "id": "lemon-garlic-tilapia-meal",
     "name": "Lemon Garlic Tilapia, Roasted Zucchini, Peppers & Cabbage, Chickpea Pasta",
     "estimatedTime": "35 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "4 tilapia filets (approx. 6 oz each)",
       "3 medium zucchini, sliced into rounds or half-moons",
@@ -291,6 +300,7 @@
     "id": "greek-chicken-meatballs-meal",
     "name": "Greek Chicken Meatballs, Roasted Carrots & Squash, Lentils",
     "estimatedTime": "50 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "For Meatballs: 2 lb ground chicken",
       "For Meatballs: 1/4 cup chopped fresh parsley",
@@ -328,6 +338,7 @@
     "id": "tamari-honey-salmon-meal",
     "name": "Tamari-Honey Salmon, Roasted Broccoli & Peppers, Quinoa",
     "estimatedTime": "40 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "4 salmon filets (approx. 6 oz each)",
       "2 heads broccoli, cut into florets",
@@ -358,6 +369,7 @@
     "id": "turkey-taco-bowls-meal",
     "name": "Turkey Taco Bowls, Roasted Carrots, Cabbage Slaw, Brown Rice",
     "estimatedTime": "50 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "2 lb ground turkey",
       "6 medium carrots, peeled and cut into rounds or sticks",
@@ -398,6 +410,7 @@
     "id": "sheet-pan-chicken-veggies-pasta-meal",
     "name": "Sheet Pan Chicken & Veggies, Chickpea Pasta",
     "estimatedTime": "40 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "3 lb boneless, skinless chicken breasts, cut into 1-inch pieces",
       "1 medium butternut squash, peeled, seeded, and cubed",
@@ -431,6 +444,7 @@
     "id": "garlic-pork-tenderloin-beans-meal",
     "name": "Garlic Pork Tenderloin, Roasted Broccoli & Carrots, White Beans",
     "estimatedTime": "45 minutes",
+	"dateAdded": "2025-05-12T10:00:00.000Z", 
     "ingredients": [
       "2 pork tenderloins (about 1-1.5 lb total)",
       "2 heads broccoli, cut into florets",
