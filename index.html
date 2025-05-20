@@ -10,17 +10,17 @@
 <body>
     <header>
         <h1>🍳 CookMate</h1>
+        <!-- ADD THIS BUTTON -->
         <a href="https://thugginss.github.io/" class="home-button" target="_blank" rel="noopener noreferrer">Back to Main Site</a>
-    </header>
+        <!-- END OF ADDED BUTTON -->
+		</header>
 
     <main>
         <!-- Recipe List View -->
         <section id="recipe-list-view" class="view active">
-            <div class="list-view-controls">
-                <h2>Choose a Recipe</h2>
-                <button id="add-new-recipe-button" class="button-primary">Add New Recipe</button>
-            </div>
+            <h2>Choose a Recipe</h2>
             <div id="recipe-list-container">
+                <!-- Recipe cards will be loaded here by JavaScript -->
                 <p>Loading recipes...</p>
             </div>
         </section>
@@ -29,59 +29,16 @@
         <section id="recipe-detail-view" class="view">
             <div class="detail-controls">
                 <button id="back-button">← Back to List</button>
-                <div> <!-- Group for edit/delete buttons -->
-                    <button id="edit-recipe-button" class="button-secondary">Edit Recipe</button>
-                    <button id="delete-recipe-button" class="button-danger">Delete Recipe</button>
-                    <button id="wake-lock-button" title="Prevent screen from sleeping">Keep Screen Awake: OFF</button>
-                </div>
+                <button id="wake-lock-button" title="Prevent screen from sleeping">Keep Screen Awake: OFF</button>
             </div>
             <div id="recipe-content">
                 <!-- Recipe details will be loaded here -->
             </div>
-            <div class="cooking-controls">
-                <button id="cooked-button">I Cooked This!</button>
-                <p id="last-cooked-info">Last cooked: <span id="detail-last-cooked-date">Never</span></p>
-                <p id="last-marked-info">Marked as cooked: <span id="detail-last-marked-date">Never</span></p>
+             <div class="cooking-controls">
+                 <button id="cooked-button">I Cooked This!</button>
+                 <p id="last-cooked-info">Last cooked: <span id="detail-last-cooked-date">Never</span></p>
+                 <p id="last-marked-info">Marked as cooked: <span id="detail-last-marked-date">Never</span></p>
             </div>
-        </section>
-
-        <!-- Recipe Form View (for Add/Edit) -->
-        <section id="recipe-form-view" class="view">
-            <h2 id="form-title">Add New Recipe</h2>
-            <form id="recipe-form">
-                <input type="hidden" id="recipe-id-input"> <!-- For editing existing recipe -->
-
-                <div class="form-group">
-                    <label for="recipe-name">Recipe Name:</label>
-                    <input type="text" id="recipe-name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="recipe-time">Estimated Cooking Time:</label>
-                    <input type="text" id="recipe-time" placeholder="e.g., 30 minutes" required>
-                </div>
-
-                <fieldset>
-                    <legend>Ingredients</legend>
-                    <div id="ingredient-groups-container">
-                        <!-- Ingredient groups and items will be added here by JS -->
-                    </div>
-                    <button type="button" id="add-ingredient-group-button" class="button-tertiary">Add Ingredient Group</button>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Instructions</legend>
-                    <div id="instructions-container">
-                        <!-- Instruction steps will be added here by JS -->
-                    </div>
-                    <button type="button" id="add-instruction-button" class="button-tertiary">Add Instruction Step</button>
-                </fieldset>
-
-                <div class="form-actions">
-                    <button type="submit" id="save-recipe-button" class="button-primary">Save Recipe</button>
-                    <button type="button" id="cancel-form-button" class="button-secondary">Cancel</button>
-                </div>
-            </form>
         </section>
     </main>
 

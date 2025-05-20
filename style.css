@@ -1,184 +1,277 @@
-/* ... (your existing CSS, including header styles) ... */
-
-/* General Button Styling Additions */
-.button-primary {
-    background-color: #3a86ff; /* Blue for primary actions */
-    color: white;
-}
-.button-primary:hover {
-    background-color: #3272db;
+/* Basic Reset & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.button-secondary {
-    background-color: #aaa;
-    color: white;
-}
-.button-secondary:hover {
-    background-color: #999;
-}
-
-.button-danger {
-    background-color: #dc3545; /* Red for dangerous actions */
-    color: white;
-}
-.button-danger:hover {
-    background-color: #c82333;
-}
-
-.button-tertiary {
-    background-color: #f0f0f0;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
     color: #333;
-    border: 1px solid #ccc;
-}
-.button-tertiary:hover {
-    background-color: #e0e0e0;
+    padding-bottom: 50px; /* Ensure footer doesn't overlap content */
 }
 
-
-/* List View Controls */
-.list-view-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+    background-color: #5a8f7b; /* Muted green */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
     margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-.list-view-controls h2 {
-    margin-bottom: 0; /* Remove default margin from h2 */
+
+header {
+    background-color: #5a8f7b; /* Muted green */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Add display flex to align title and button */
+    display: flex;
+    justify-content: space-between; /* Puts title on left, button on right */
+    align-items: center; /* Vertically aligns them */
+    flex-wrap: wrap; /* Allows button to wrap below title on small screens */
+}
+
+header h1 {
+    margin: 0;
+    /* Adjust margin if needed, e.g., margin-right: 1rem; */
+}
+
+/* Styling for the new home button */
+.home-button {
+    display: inline-block; /* Allows padding and acts like a block */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-decoration: none; /* Remove underline from link */
+    color: #5a8f7b; /* Button text color */
+    background-color: #fff; /* Button background color */
+    border: 1px solid #5a8f7b; /* Optional border */
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-left: 1rem; /* Space from the title or other elements */
+}
+
+.home-button:hover {
+    background-color: #e8f3ef; /* Lighter green on hover */
+    color: #4a7a6a;
+}
+
+/* Responsive adjustment for smaller screens for the header */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack title and button vertically */
+    }
+    header h1 {
+        margin-bottom: 0.5rem; /* Add space below title when stacked */
+    }
+    .home-button {
+        margin-left: 0; /* Remove left margin when stacked */
+        margin-top: 0.5rem; /* Add space above button when stacked */
+        width: 100%; /* Make button full width when stacked */
+        text-align: center;
+    }
 }
 
 
-/* Recipe Detail View - Adjustments for more buttons */
+/* Buttons (general styles - ensure this doesn't conflict too much) */
+button, .home-button { /* Added .home-button here if you want it to share some base styles */
+    /* ... your existing general button styles ... */
+    /* You might need to adjust padding or font-size if they are different */
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* View Management */
+.view {
+    display: none; /* Hide views by default */
+}
+
+.view.active {
+    display: block; /* Show the active view */
+}
+
+/* Recipe List View */
+#recipe-list-view h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+#recipe-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.recipe-card h3 {
+    margin-bottom: 0.5rem;
+    color: #5a8f7b;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.recipe-card .last-cooked-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.8rem;
+    font-style: italic;
+}
+
+/* Recipe Detail View */
+#recipe-detail-view {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem 2rem;
+}
+
 .detail-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Wrap buttons on smaller screens */
     gap: 0.5rem;
 }
-.detail-controls > div { /* Group for edit/delete/wake */
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
 
-
-/* Recipe Form View */
-#recipe-form-view {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 1.5rem 2rem;
-    margin-top: 1rem;
-}
-
-#recipe-form-view h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
+#recipe-content h2 {
     color: #5a8f7b;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
 }
 
-.form-group {
+#recipe-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+#recipe-content ul, #recipe-content ol {
+    margin-left: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-    color: #444;
-    text-align: left;
-}
-
-.form-group input[type="text"],
-.form-group input[type="url"],
-.form-group textarea {
-    width: 100%;
-    padding: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-fieldset {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 4px;
-}
-
-legend {
-    font-weight: bold;
-    color: #5a8f7b;
-    padding: 0 0.5rem;
-}
-
-.ingredient-group,
-.instruction-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+#recipe-content li {
     margin-bottom: 0.5rem;
 }
-.ingredient-group input[type="text"],
-.instruction-item input[type="text"] {
-    flex-grow: 1;
-}
-.ingredient-group-header {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-}
-.ingredient-group-header input[type="text"] {
-    font-weight: bold;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    font-size: 1.05em;
-    padding-left: 0;
-}
-.ingredient-group-items {
-    padding-left: 1rem; /* Indent items under a group */
-}
 
-.remove-item-button {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    padding: 0.3rem 0.6rem;
-    font-size: 0.8rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.remove-item-button:hover {
-    background-color: #f1b0b7;
-}
-
-#add-ingredient-group-button,
-#add-ingredient-item-button, /* This class will be used for buttons within groups */
-#add-instruction-button {
-    margin-top: 0.5rem;
-    display: block; /* Make them block for easier layout or inline-block */
-}
-
-.form-actions {
+.cooking-controls {
     margin-top: 2rem;
-    text-align: right;
-    display: flex;
-    gap: 0.5rem;
-    justify-content: flex-end;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    text-align: center;
 }
 
-/* Recipe Content for Ingredient Groups */
-#recipe-content .ingredient-group-title {
+.cooking-controls p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.cooking-controls span {
     font-weight: bold;
-    margin-top: 0.8em;
-    margin-bottom: 0.2em;
-    color: #444;
-}
-#recipe-content ul.ingredient-group-list {
-    list-style-type: disc; /* Or your preferred style */
-    margin-left: 2.5rem; /* Indent further */
-    margin-bottom: 0.8em;
+    color: #333;
 }
 
 
-/* ... (rest of your existing CSS) ... */
+/* Buttons */
+button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #5a8f7b;
+    color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #4a7a6a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+button:active {
+     background-color: #3e685a;
+     box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+#back-button {
+    background-color: #aaa;
+}
+#back-button:hover {
+    background-color: #999;
+}
+#back-button:active {
+     background-color: #888;
+}
+
+
+#wake-lock-button.active {
+    background-color: #e09f3e; /* Orange when active */
+    color: #fff;
+}
+#wake-lock-button.active:hover {
+    background-color: #c78c36;
+}
+
+
+#cooked-button {
+    background-color: #3a86ff; /* Blue */
+    margin-bottom: 0.8rem; /* Space below button */
+}
+#cooked-button:hover {
+    background-color: #3272db;
+}
+#cooked-button:active {
+     background-color: #2a61b9;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #888;
+    /* position: fixed; */ /* Optional: if you want it stuck to the bottom */
+    /* bottom: 0; */
+    /* width: 100%; */
+    /* background-color: #e9e9e9; */
+}
